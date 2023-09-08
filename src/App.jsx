@@ -19,7 +19,7 @@ function App() {
     <div>
       <AuthContextProvider>
         <Navbar />
-        <Suspense>
+        <Suspense fallback={<h1>Loading...</h1>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
