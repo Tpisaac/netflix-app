@@ -27,7 +27,7 @@ function App() {
         <AuthContextProvider>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/netflix-app" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route
