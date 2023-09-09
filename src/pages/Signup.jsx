@@ -35,7 +35,7 @@ const Signup = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="p-3 my-2 bg-gray-700 rounded"
                 type="email"
-                placeholder="Email"
+                placeholder="Use Dummy Email"
                 autoComplete="email"
                 required
               />
@@ -43,7 +43,7 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 className="p-3 my-2 bg-gray-700 rounded"
                 type="password"
-                placeholder="Password"
+                placeholder="Use Dummy Password"
                 autoComplete="current-password"
                 required
               />
