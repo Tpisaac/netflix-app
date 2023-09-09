@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 // import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
@@ -8,6 +8,7 @@ import { AuthContextProvider } from "./context/AuthContext";
 // import Account from "./pages/Account";
 // import ProtectedRoute from "./components/ProtectedRoute";
 
+const Navbar = lazy(() => import("./components/Navbar"));
 const Home = lazy(() => import("./pages/Home"));
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
@@ -18,8 +19,8 @@ function App() {
   return (
     <div>
       <AuthContextProvider>
-        <Navbar />
         <Suspense fallback={<h1>Loading...</h1>}>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
