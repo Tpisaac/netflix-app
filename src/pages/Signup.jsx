@@ -12,7 +12,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       await signUp(email, password);
-      navigate("/");
+      navigate("/netflix-app");
     } catch (error) {
       console.log(error);
     }
